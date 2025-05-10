@@ -1,5 +1,5 @@
-import React, { type JSX } from "react";
-import Item from "../models/Item";
+import { type JSX } from "react";
+import type Item from "../models/Item.types";
 
 interface ShoppingListProps {
   items: Item[];
@@ -10,11 +10,11 @@ export default function ShoppingList({
 }: ShoppingListProps): JSX.Element {
   return (
     <>
-      <h1>Shopping List</h1>
+      <h1>Shopping List!</h1>
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            {item.name} - {item.quantity}{" "}
+            {item.product} - {item.quantity}{" "}
           </li>
         ))}
       </ul>
