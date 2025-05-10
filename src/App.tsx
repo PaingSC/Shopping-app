@@ -1,13 +1,16 @@
+import React, { useState } from "react";
+import ShoppingList from "./components/ShoppingList";
+import Item from "./models/Item";
+
 import "./App.css";
-import Greeter from "./components/Greeter";
 
 function App() {
+  const [items, setItems] = useState<Item[]>([]);
+
   return (
     <>
       <div>
-        <Greeter />
-        <Greeter />
-        <Greeter />
+        <ShoppingList items={items} />
       </div>
     </>
   );
